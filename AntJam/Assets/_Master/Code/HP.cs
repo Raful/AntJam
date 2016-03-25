@@ -11,6 +11,21 @@
 
     public void DealDamage(int damage)
     {
+        currentHp -= damage;
 
+        if (currentHp < 0)
+        {
+            currentHp = 0;
+        }
+    }
+
+    public void RestoreDamage(int restoredDamage)
+    {
+        currentHp += restoredDamage;
+
+        if (currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
     }
 }

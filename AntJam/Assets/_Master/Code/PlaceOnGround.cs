@@ -12,7 +12,9 @@ public class PlaceOnGround : MonoBehaviour {
         {
             if (hit.collider.tag == "Ground") //Assumes all ground objects use the tag Ground
             {
-                transform.position = hit.point + Vector3.up * GetComponent<Collider>().bounds.size.y / 2;
+                Collider thisCollider = GetComponent<Collider>();
+                float yOffset = thisCollider.bounds.size.y / 2 - (thisCollider.bounds.center.y - transform.position.y);
+                transform.position = hit.point + Vector3.up * yOffset;
             }
         }
     }
