@@ -1,0 +1,24 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+RobotSplit/Assets/Resources/Highscore
+RobotSplit/Assets/Highscore
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+RobotSplit/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
