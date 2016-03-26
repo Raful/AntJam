@@ -23,29 +23,45 @@ public class AntAttack : MonoBehaviour
     {
         m_movementComponent.isHalted = false;
 
-        Ray ray = new Ray(transform.position + Vector3.left * m_range, Vector3.right);
-        foreach (RaycastHit hit in Physics.RaycastAll(ray, m_range * 2))
-        {
-            if (hit.collider.tag == "Ally")
-            {
-                HPComponent hpComponent = hit.collider.GetComponent<HPComponent>();
-                if (hpComponent.isAlive)
-                {
-                    if (m_timeSinceLastAttack < 0 || m_timeSinceLastAttack >= m_attackCooldown)
-                    {
-                        //Make an attack
-                        hpComponent.hp.DealDamage(m_damage);
-                    }
+		RaycastHit hit;
+		if (GetTargetInRange (Vector3.left, out hit) || GetTargetInRange(Vector3.right, out hit)) 
+		{
+			HPComponent hpComponent = hit.collider.GetComponent<HPComponent>();
+			if (hpComponent.isAlive)
+			{
+				if (m_timeSinceLastAttack < -0.0001f || m_timeSinceLastAttack >= m_attackCooldown)
+				{
+					//Make an attack
+					hpComponent.hp.DealDamage(m_damage);
+					m_timeSinceLastAttack = 0;
+				}
 
-                    //Stop moving while attacking
-                    m_movementComponent.isHalted = true;
-                }
-            }
-        }
+				//Stop moving while attacking
+				m_movementComponent.isHalted = true;
+			}
+		}
 
         if (m_timeSinceLastAttack > -0.0001f)
         {
             m_timeSinceLastAttack += Time.deltaTime;
         }
+	}
+
+	private bool GetTargetInRange(Vector3 direction, out RaycastHit outHit)
+	{
+		Ray ray = new Ray(transform.position, direction);
+		Debug.DrawRay (ray.origin, ray.direction * m_range, Color.red);
+		foreach (RaycastHit hit in Physics.RaycastAll(ray, m_range))
+		{
+			if (hit.collider.tag == "Ally")
+			{
+				outHit = hit;
+				return true;
+			}
+		}
+
+		//No targets in range
+		outHit = new RaycastHit();
+		return false;
 	}
 }
