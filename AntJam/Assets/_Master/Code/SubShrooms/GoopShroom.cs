@@ -4,6 +4,7 @@ using System.Collections;
 public class GoopShroom : AbstractShroom
 {
     public int Range { get { return m_range; } }
+    public float SlowForce { get { return m_slow; } }
 	// Use this for initialization
 	void OnEnable ()
     {

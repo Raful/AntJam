@@ -5,6 +5,7 @@ public class AntMovement : MonoBehaviour
 {
 	[SerializeField]
 	private float m_speed = 1;
+    public float Speed { get { return m_speed; } }
 
     public bool isHalted { get; set; }
 
