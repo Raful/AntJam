@@ -1,71 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &119622
+--- !u!1 &108048
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 426574}
-  - 114: {fileID: 11488674}
+  - 4: {fileID: 487554}
+  - 33: {fileID: 3337688}
+  - 65: {fileID: 6516572}
+  - 23: {fileID: 2379472}
+  - 114: {fileID: 11497136}
+  - 114: {fileID: 11422926}
+  - 114: {fileID: 11406676}
+  - 114: {fileID: 11459324}
   m_Layer: 0
-  m_Name: AntSpawner
+  m_Name: TankAnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &126230
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 423384}
-  - 33: {fileID: 3353814}
-  - 65: {fileID: 6527740}
-  - 23: {fileID: 2328968}
-  - 114: {fileID: 11462484}
-  m_Layer: 0
-  m_Name: AntMainBase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &423384
+--- !u!4 &487554
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126230}
+  m_GameObject: {fileID: 108048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3, y: 1.98, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children:
-  - {fileID: 426574}
+  m_LocalPosition: {x: 6.37, y: 0.97, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &426574
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 423384}
-  m_RootOrder: 0
---- !u!23 &2328968
+--- !u!23 &2379472
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126230}
+  m_GameObject: {fileID: 108048}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,58 +60,75 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3353814
+--- !u!33 &3337688
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126230}
+  m_GameObject: {fileID: 108048}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6527740
+--- !u!65 &6516572
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126230}
+  m_GameObject: {fileID: 108048}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11462484
+--- !u!114 &11406676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126230}
+  m_GameObject: {fileID: 108048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1096a9e6dd86c74880a220029fa80cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_hp:
+    m_maxHp: 10
+--- !u!114 &11422926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108048}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92c2b538b9aa593438ff977cea3f2a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11488674
+--- !u!114 &11459324
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119622}
+  m_GameObject: {fileID: 108048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94d0703a2d7905c4689d1f8d390df5ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e4c4e32ee63b35a46903be8999f2adb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_spawnCooldown: 2
-  m_antTypes:
-  - antPrefab: {fileID: 140850, guid: 9c6a7318777375b46a64d856453bb639, type: 2}
-    spawnProbability: 2
-    timeToFirstSpawn: 0
-  - antPrefab: {fileID: 139126, guid: 46fe2eadf99c3af48b58a04682db8664, type: 2}
-    spawnProbability: 2
-    timeToFirstSpawn: 0
-  - antPrefab: {fileID: 108048, guid: ebf63d501c45015468cb845ca9aca6b7, type: 2}
-    spawnProbability: 1
-    timeToFirstSpawn: 0
+  m_range: 3
+  m_damage: 1
+  m_attackCooldown: 1
+--- !u!114 &11497136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623a004cb95ff734abccdb29a0482165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_speed: 0.7
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -147,5 +138,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 126230}
+  m_RootGameObject: {fileID: 108048}
   m_IsPrefabParent: 1
