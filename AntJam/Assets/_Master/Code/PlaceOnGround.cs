@@ -6,21 +6,29 @@ public class PlaceOnGround : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        //Place the ant on the ground
-        Ray ray = new Ray(transform.position + Vector3.up * 1000f, Vector3.down);
+        //Move the object so that the collider touches the ground
+        transform.position += Vector3.down * GetDistanceFromGround(GetComponent<Collider>());
+    }
+	
+    /// <summary>
+    /// Returns the distance between the bottom of the collider and the ground
+    /// </summary>
+    /// <param name="collider"></param>
+    /// <returns></returns>
+    public static float GetDistanceFromGround(Collider collider)
+    {
+        Vector3 position = collider.bounds.center;
+        Ray ray = new Ray(position + Vector3.up * 1000f, Vector3.down);
         foreach (RaycastHit hit in Physics.RaycastAll(ray, 2000f))
         {
             if (hit.collider.tag == "Ground") //Assumes all ground objects use the tag Ground
             {
-                Collider thisCollider = GetComponent<Collider>();
-                float yOffset = thisCollider.bounds.size.y / 2 - (thisCollider.bounds.center.y - transform.position.y);
-                transform.position = hit.point + Vector3.up * yOffset;
+                float yOffset = collider.bounds.size.y / 2 - (collider.bounds.center.y - position.y);
+                return (position.y - yOffset) - hit.point.y;
             }
         }
+
+        //The ray didn't hit the ground
+        throw new System.Exception("There's no ground below the position " + position);
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
