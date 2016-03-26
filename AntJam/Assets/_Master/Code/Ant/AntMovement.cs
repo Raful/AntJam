@@ -4,7 +4,7 @@ using System.Collections;
 public class AntMovement : MonoBehaviour 
 {
 	[SerializeField]
-	private float m_speed = 1;
+	protected float m_speed = 1;
     public float Speed { get { return m_speed; } }
 
     public bool isHalted { get; set; }
@@ -19,7 +19,7 @@ public class AntMovement : MonoBehaviour
     }
     
 	// Update is called once per frame
-	void FixedUpdate () 
+	protected virtual void FixedUpdate () 
 	{
         if (!isHalted)
         {
@@ -46,7 +46,7 @@ public class AntMovement : MonoBehaviour
         }
 	}
 
-    void Update()
+    protected virtual void Update()
     {
         Vector3 offset = new Vector3(m_collider.bounds.size.x / 2, 1000f);
         float distanceToGround = PlaceOnGround.GetDistanceFromGround(m_collider);

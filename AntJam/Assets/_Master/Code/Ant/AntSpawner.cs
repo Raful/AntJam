@@ -32,7 +32,7 @@ public class AntSpawner : MonoBehaviour
             Debug.LogError("No ant types are defined");
         }
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
