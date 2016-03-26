@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Shroom applying a slow aura to nearby units with the enemy tag. Requires the enemies to have the RigidBody component.
+/// The slow is handled in the child script GoopAura.cs
+/// </summary>
 public class GoopShroom : AbstractShroom
 {
     public int Range { get { return m_range; } }
     public float SlowForce { get { return m_slow; } }
+
 	// Use this for initialization
 	void OnEnable ()
     {
@@ -17,7 +22,6 @@ public class GoopShroom : AbstractShroom
 	// Update is called once per frame
 	void Update ()
     {
-	    //TODO Figure out how to apply slow.
 
 	}
 
