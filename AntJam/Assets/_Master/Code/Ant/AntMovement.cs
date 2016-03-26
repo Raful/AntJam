@@ -6,6 +6,8 @@ public class AntMovement : MonoBehaviour
 	[SerializeField]
 	private float m_speed = 1;
 
+    public bool isHalted { get; set; }
+
     private Collider m_collider;
     private float m_yVelocityDown = 0;
     private bool m_falling = false;
@@ -18,20 +20,23 @@ public class AntMovement : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-        //Calculate velocity
-        Vector3 velocity = Vector3.left * m_speed * Time.deltaTime;
-        
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-        
-        Vector3 offset = new Vector3(m_collider.bounds.size.x / 2, -m_collider.bounds.size.y / 2);
-        //Check if another ant is in front of this one
-        if (RaycastAnt(transform.position + offset, velocity, m_collider.bounds.size.x + 0.1f))
+        if (!isHalted)
         {
-            //Stack on top of another ant
-            velocity += Vector3.up * Mathf.Abs(velocity.x) * 10;
-        }
+            //Calculate velocity
+            Vector3 velocity = Vector3.left * m_speed * Time.deltaTime;
 
-        transform.Translate (velocity, Space.Self);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            Vector3 offset = new Vector3(m_collider.bounds.size.x / 2, -m_collider.bounds.size.y / 2);
+            //Check if another ant is in front of this one
+            if (RaycastAnt(transform.position + offset, velocity, m_collider.bounds.size.x + 0.1f))
+            {
+                //Stack on top of another ant
+                velocity += Vector3.up * Mathf.Abs(velocity.x) * 10;
+            }
+
+            transform.Translate(velocity, Space.Self);
+        }
 
         if (m_falling)
         {
