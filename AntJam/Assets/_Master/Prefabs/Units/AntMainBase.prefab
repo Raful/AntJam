@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spawnCooldown: 2
   m_antTypes:
-  - antPrefab: {fileID: 140850, guid: 9c6a7318777375b46a64d856453bb639, type: 2}
+  - antPrefab: {fileID: 184124, guid: 7cb3e051c91318d4b8faa1ce1c6ea23e, type: 2}
     spawnProbability: 2
     timeToFirstSpawn: 0
   - antPrefab: {fileID: 139126, guid: 46fe2eadf99c3af48b58a04682db8664, type: 2}
