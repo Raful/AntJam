@@ -38,5 +38,16 @@ public class GoopAura : MonoBehaviour
         }
     }
 
+    void OnTriggerStay(Collider unit)
+    {
+        if (unit.tag == "Enemy" && !unit.GetComponent<AntMovement>().isHalted)
+        {
+            float slow = this.GetComponentInParent<GoopShroom>().SlowForce / 100;
+            Debug.Log("Enemy is slowed by " + (slow * 100) + "%");
+            Vector3 speedReduction = Vector3.right * slow * unit.GetComponent<AntMovement>().Speed * Time.deltaTime;
+            unit.gameObject.transform.Translate(speedReduction, Space.Self);
+        }
+    }
+
     private int m_auraRange;
 }
