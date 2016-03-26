@@ -22,7 +22,7 @@ public class BlissShroom : AbstractShroom
             if (hit.collider.tag == "Enemy")
             {
                 hit.collider.GetComponent<BlissComponent>().m_bliss.AddBliss(hit.collider.GetComponent<BlissComponent>().m_bliss.maxBliss);
-                this.GetComponent<HPComponent>().m_hp.DealDamage(this.GetComponent<HPComponent>().m_hp.maxHp);
+                this.GetComponent<HPComponent>().hp.DealDamage(this.GetComponent<HPComponent>().hp.maxHp);
             }
         }
 	}

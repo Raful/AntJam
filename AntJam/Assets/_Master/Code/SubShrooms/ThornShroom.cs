@@ -25,7 +25,7 @@ public class ThornShroom : AbstractShroom
             {
                 if (hit.collider.tag == "Enemy")
                 {
-                    hit.collider.GetComponent<HPComponent>().m_hp.DealDamage(m_Damage);
+                    hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
                     Debug.Log("Dealt " + m_Damage.ToString() + " damage.");
                 }
             }

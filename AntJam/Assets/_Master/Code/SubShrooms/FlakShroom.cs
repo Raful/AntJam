@@ -26,7 +26,7 @@ public class FlakShroom : AbstractShroom
             {
                 if (hit.collider.tag == "Enemy")
                 {
-                    hit.collider.GetComponent<HPComponent>().m_hp.DealDamage(m_Damage);
+                    hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
                     m_CooldownTimer = m_AttackCooldown;
                     break;
                 }
@@ -40,7 +40,7 @@ public class FlakShroom : AbstractShroom
             {
                 if (hit.collider.tag == "Enemy")
                 {
-                    hit.collider.GetComponent<HPComponent>().m_hp.DealDamage(m_Damage);
+                    hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
                     m_CooldownTimer = m_AttackCooldown;
                     break;
                 }
