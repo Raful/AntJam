@@ -140,7 +140,7 @@ MonoBehaviour:
     timeToFirstSpawn: 0
   - antPrefab: {fileID: 133076, guid: ec711d6613731a841882c82058c0b61b, type: 2}
     spawnProbability: 1
-    timeToFirstSpawn: 0
+    timeToFirstSpawn: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

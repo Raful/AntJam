@@ -5,6 +5,8 @@ public class AntMovement : MonoBehaviour
 {
 	[SerializeField]
 	protected float m_speed = 1;
+	[SerializeField][Tooltip("The game object containing the graphics for this ant")]
+	protected GameObject m_graphics;
     public float Speed { get { return m_speed; } }
 
     public bool isHalted { get; set; }
@@ -34,6 +36,9 @@ public class AntMovement : MonoBehaviour
             {
                 //Stack on top of another ant
                 velocity += Vector3.up * Mathf.Abs(velocity.x) * 10;
+
+				if (m_graphics != null)
+					m_graphics.transform.rotation = Quaternion.Euler (velocity);
             }
 
             transform.Translate(velocity, Space.Self);
