@@ -21,7 +21,7 @@ public class FlakShroom : AbstractShroom
         // Prioritize enemies closest to home base.
         if (m_CooldownTimer <= 0)
         {
-            Ray ray = new Ray(transform.position + Vector3.up * 500 + Vector3.left * m_MaxRange, Vector3.right);
+            Ray ray = new Ray(transform.position + Vector3.up * 8 + Vector3.left * m_MaxRange, Vector3.right);
             foreach (RaycastHit hit in Physics.RaycastAll(ray, m_MaxRange - m_MinRange))
             {
                 if (hit.collider.tag == "Enemy")

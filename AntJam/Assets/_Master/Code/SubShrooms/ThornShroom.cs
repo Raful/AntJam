@@ -20,13 +20,17 @@ public class ThornShroom : AbstractShroom
 
         if (m_CooldownTimer <= 0)
         {
-            Ray ray = new Ray(transform.position + Vector3.left * m_Range, Vector3.right);
-            foreach (RaycastHit hit in Physics.RaycastAll(ray, m_Range * 2))
+            // Since ants can stack a raycast must be done on the entire antstack
+            for (int height = 0; height < 8; height++)
             {
-                if (hit.collider.tag == "Enemy")
+                Ray ray = new Ray(transform.position + Vector3.up * height + Vector3.left * m_Range, Vector3.right);
+                foreach (RaycastHit hit in Physics.RaycastAll(ray, m_Range * 2))
                 {
-                    hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
-                    Debug.Log("Dealt " + m_Damage.ToString() + " damage.");
+                    if (hit.collider.tag == "Enemy")
+                    {
+                        hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
+                        Debug.Log("Dealt " + m_Damage.ToString() + " damage.");
+                    }
                 }
             }
 

@@ -9,7 +9,7 @@ public class GoopAura : MonoBehaviour
     {
         Debug.Log("Slow aura enabled.");
         m_auraRange = this.gameObject.GetComponentInParent<GoopShroom>().Range;
-        this.gameObject.GetComponent<BoxCollider>().size = new Vector3(-m_auraRange, 10, m_auraRange);
+        this.gameObject.GetComponent<BoxCollider>().size = new Vector3(-m_auraRange, 30, m_auraRange);
         Vector3 boxCol = this.GetComponent<BoxCollider>().size;
         Debug.Log("Box collider size: " + boxCol.ToString());
     }

@@ -16,7 +16,7 @@ MonoBehaviour:
   SourceProjectPath: 
   SourceBankPath: C:\Users\Gustaf\Desktop\GameJam\NGJ Warmup Jam\FMOD\Desktop
   AutomaticEventLoading: 1
-  AutomaticSampleLoading: 1
+  AutomaticSampleLoading: 0
   SpeakerModeSettings:
   - Platform: 1
     Value: 3
