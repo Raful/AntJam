@@ -16,5 +16,6 @@ public class CthuluShroomHP : HPComponent
 	private void GameLost()
 	{
 		Debug.Log ("Game lost");
+		Time.timeScale = 0;
 	}
 }

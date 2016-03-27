@@ -188,9 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Cost: 0
   m_BuildCooldown: 0
-  m_Range: 0
-  m_BlissInflict: 0
-  m_AttackCooldown: 0
+  m_Range: 3
+  m_BlissInflict: 1
+  m_AttackCooldown: 1
 --- !u!114 &11475626
 MonoBehaviour:
   m_ObjectHideFlags: 1
