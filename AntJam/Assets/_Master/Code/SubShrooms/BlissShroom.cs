@@ -17,7 +17,7 @@ public class BlissShroom : AbstractShroom
 	void Update ()
     {
         Ray ray = new Ray(transform.position, Vector3.right);
-        foreach(RaycastHit hit in Physics.RaycastAll(ray, 2)) // What is proper melee range?
+        foreach(RaycastHit hit in Physics.RaycastAll(ray, 0.5f)) // What is proper melee range?
         {
             if (hit.collider.tag == "Enemy")
             {
