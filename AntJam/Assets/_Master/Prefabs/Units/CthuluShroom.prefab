@@ -207,7 +207,7 @@ GameObject:
   - 4: {fileID: 473808}
   - 95: {fileID: 9580498}
   m_Layer: 0
-  m_Name: chtulu mush_final_fixed
+  m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

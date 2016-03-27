@@ -23,22 +23,18 @@ public class AntAttack : MonoBehaviour
     {
         m_movementComponent.isHalted = false;
 
-		RaycastHit hit;
-		if (GetTargetInRange (Vector3.left, out hit) || GetTargetInRange(Vector3.right, out hit)) 
+		HPComponent hpComponent;
+		if (GetTargetInRange (Vector3.left, out hpComponent) || GetTargetInRange(Vector3.right, out hpComponent)) 
 		{
-			HPComponent hpComponent = hit.collider.GetComponent<HPComponent>();
-			if (hpComponent.isAlive)
+			if (m_timeSinceLastAttack < -0.0001f || m_timeSinceLastAttack >= m_attackCooldown)
 			{
-				if (m_timeSinceLastAttack < -0.0001f || m_timeSinceLastAttack >= m_attackCooldown)
-				{
-					//Make an attack
-					hpComponent.hp.DealDamage(m_damage);
-					m_timeSinceLastAttack = 0;
-				}
-
-				//Stop moving while attacking
-				m_movementComponent.isHalted = true;
+				//Make an attack
+				hpComponent.hp.DealDamage(m_damage);
+				m_timeSinceLastAttack = 0;
 			}
+
+			//Stop moving while attacking
+			m_movementComponent.isHalted = true;
 		}
 
         if (m_timeSinceLastAttack > -0.0001f)
@@ -47,21 +43,31 @@ public class AntAttack : MonoBehaviour
         }
 	}
 
-	private bool GetTargetInRange(Vector3 direction, out RaycastHit outHit)
+	/// <summary>
+	/// Gets the target in range.
+	/// </summary>
+	/// <returns><c>true</c>, if target in range was gotten, <c>false</c> otherwise.</returns>
+	/// <param name="direction">Direction from the ant to check for a target.</param>
+	/// <param name="outHPComponent">HP component of the target.</param>
+	private bool GetTargetInRange(Vector3 direction, out HPComponent outHPComponent)
 	{
 		Ray ray = new Ray(transform.position, direction);
 		Debug.DrawRay (ray.origin, ray.direction * m_range, Color.red);
 		foreach (RaycastHit hit in Physics.RaycastAll(ray, m_range))
 		{
-			if (hit.collider.tag == "Ally")
+			if (hit.collider.tag == "Ally") 
 			{
-				outHit = hit;
-				return true;
+				HPComponent hpComponent = hit.collider.GetComponent<HPComponent> ();
+				if (hpComponent.isAlive) 
+				{
+					outHPComponent = hpComponent;
+					return true;
+				}
 			}
 		}
 
 		//No targets in range
-		outHit = new RaycastHit();
+		outHPComponent = null;
 		return false;
 	}
 }
