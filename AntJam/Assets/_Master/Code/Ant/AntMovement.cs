@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AntMovement : MonoBehaviour 
 {
@@ -89,9 +90,10 @@ public class AntMovement : MonoBehaviour
             }
         }
 
-		if (transform.position.x < m_startX && GetComponent<BlissComponent>().isConverted) 
+		if (transform.position.x > m_startX && GetComponent<BlissComponent>().isConverted) 
 		{
-			Debug.Log ("Game lost");
+			Debug.Log ("Game won");
+			enabled = false;
 		}
     }
 
