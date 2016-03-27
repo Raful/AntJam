@@ -59,26 +59,6 @@ public class FlakShroom : AbstractShroom
                 }
             }
         }
-        CheckDamage();
-    }
-
-    /// <summary>
-    /// Checks if the unit has recieved damage. Plays the hurt sound event if true.
-    /// </summary>
-    void CheckDamage()
-    {
-        var hpc = gameObject.GetComponent<HPComponent>();
-        if (hpc.isHurt && hpc.isAlive)
-        {
-            gameObject.GetComponent<EventPlayer>().PlayEvent();
-            hpc.isHurt = false;
-        }
-    }
-
-    void OnDestroy()
-    {
-        gameObject.GetComponent<EventPlayer>().ChangeParameter("isDead", 1f);
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
     }
 
     [SerializeField]

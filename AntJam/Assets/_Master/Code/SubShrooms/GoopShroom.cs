@@ -34,32 +34,6 @@ public class GoopShroom : AbstractShroom
             Debug.Log("Could not change sound event.");
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-        CheckDamage();
-
-    }
-
-    /// <summary>
-    /// Checks if the unit has recieved damage. Plays the hurt sound event if true.
-    /// </summary>
-    void CheckDamage()
-    {
-        var hpc = gameObject.GetComponent<HPComponent>();
-        if (hpc.isHurt && hpc.isAlive)
-        {
-            gameObject.GetComponent<EventPlayer>().PlayEvent();
-            hpc.isHurt = false;
-        }
-    }
-
-    void OnDestroy()
-    {
-        gameObject.GetComponent<EventPlayer>().ChangeParameter("isDead", 1f);
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
-    }
-
     [SerializeField]
     private int m_range;
     [SerializeField][Tooltip("Slow percentage, given in 1-100.")]

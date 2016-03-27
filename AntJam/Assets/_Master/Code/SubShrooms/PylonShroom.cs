@@ -35,25 +35,9 @@ public class PylonShroom : AbstractShroom
             Debug.Log("Could not change sound event.");
     }
 
-    void Update()
-    {
-        var hpc = gameObject.GetComponent<HPComponent>();
-        if(hpc.isHurt && hpc.isAlive)
-        {
-            gameObject.GetComponent<EventPlayer>().PlayEvent();
-            hpc.isHurt = false;
-        }
-    }
-
     void OnDisable()
     {
         m_PylonList.Remove(this);
-    }
-
-    void OnDestroy()
-    {
-        gameObject.GetComponent<EventPlayer>().ChangeParameter("isDead", 1f);
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
     }
 
     static public List<PylonShroom> m_PylonList

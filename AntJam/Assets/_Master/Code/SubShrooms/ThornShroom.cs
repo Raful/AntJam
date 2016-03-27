@@ -28,7 +28,7 @@ public class ThornShroom : AbstractShroom
     // Update is called once per frame
     void Update ()
     {
-        m_CooldownTimer =- Time.deltaTime * 1000;
+        m_CooldownTimer -= Time.deltaTime * 1000;
 
         if (m_CooldownTimer <= 0)
         {
@@ -40,6 +40,7 @@ public class ThornShroom : AbstractShroom
                 {
                     if (hit.collider.tag == "Enemy")
                     {
+                        Debug.Log("Damage dealt.");
                         hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
                         hit.collider.GetComponent<HPComponent>().isHurt = true;
                     }
@@ -48,26 +49,6 @@ public class ThornShroom : AbstractShroom
             // Reset cooldown
             m_CooldownTimer = m_AttackCooldown;
         }
-        CheckDamage();
-    }
-
-    /// <summary>
-    /// Checks if the unit has recieved damage. Plays the hurt sound event if true.
-    /// </summary>
-    void CheckDamage()
-    {
-        var hpc = gameObject.GetComponent<HPComponent>();
-        if (hpc.isHurt && hpc.isAlive)
-        {
-            gameObject.GetComponent<EventPlayer>().PlayEvent();
-            hpc.isHurt = false;
-        }
-    }
-
-    void OnDestroy()
-    {
-        gameObject.GetComponent<EventPlayer>().ChangeParameter("isDead", 1f);
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
     }
 
     [SerializeField]

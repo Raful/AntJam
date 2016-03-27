@@ -15,7 +15,7 @@ public class HPComponent : MonoBehaviour
         if (hp.currentHp <= 0)
         {
             Debug.Log("Dead: " + name);
-            Destroy(gameObject, .3f);
+            Destroy(gameObject);
             enabled = false;
         }
     }
