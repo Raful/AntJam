@@ -30,6 +30,7 @@ public class AntAttack : MonoBehaviour
 			{
 				//Make an attack
 				hpComponent.hp.DealDamage(m_damage);
+                hpComponent.isHurt = true;
 				m_timeSinceLastAttack = 0;
 			}
 

@@ -40,16 +40,6 @@ using FMODUnity;
 			{
 				eventToPlay.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject, cachedRigidBody));
 			}
-
-//Testa funktioner enkelt genom att kommentera bort någon av funktionerna nedan och använd
-//knappen O som i Olof för att testa saker.
-			if(	Input.GetKeyDown(KeyCode.O))
-			{
-				//PlayEvent();
-				//StopEvent(true);
-				//ChangeParameter("ExampleName", 1.0f);
-				//CueTrigger();
-			}
 		}
 		
 //Genom att skapa en referens till det här scriptet i ett annat script på följande sätt:
@@ -82,6 +72,13 @@ using FMODUnity;
 			}
 		}
 
+    public bool UpdateEventToPlay(string eventName)
+    {
+        StopEvent(true);
+        eventToPlay = FMODUnity.RuntimeManager.CreateInstance(eventName);
+        return (eventToPlay!= null);
+    }
+
 //Denna funktion sätter valfri parameter i eventet till ett valfritt värde.
 //För att köra funktionen från ett annat script skriv:
 //exampleName.ChangeParameter("NamnetPåDinParameter", 1.0f);
@@ -99,16 +96,6 @@ using FMODUnity;
         paramInstance.getValue(out val);
         return val;
     }
-		
-//Denna funktion triggar en Cue/Sustain point i ett event eller snapshot.
-//För att köra funktionen från ett annat script skriv:
-//exampleName.CueTrigger();
-//Har ni flera Sustain points i eventet triggas den som är aktiv just då.
-//		public void CueTrigger()
-//		{
-//			eventToPlay.getCue ("KeyOff", out cueInstance);
-//			cueInstance.trigger ();
-//		}
 	}
 
 

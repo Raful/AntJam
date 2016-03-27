@@ -8,10 +8,21 @@ public class BlissCloudShroom : AbstractShroom
 	void Start ()
     {
         m_CooldownTimer = 0;
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        gameObject.GetComponent<EventPlayer>().PlayEvent();
+        StartCoroutine(ExecuteAfterTime(4f));
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        Debug.Log("Attempting to change sound event.");
+        if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
+            Debug.Log("Could not change sound event.");
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         m_CooldownTimer -= Time.deltaTime * 1000;
         if (m_CooldownTimer <= 0)
@@ -28,7 +39,7 @@ public class BlissCloudShroom : AbstractShroom
                 }
             }
 
-            ray = new Ray(transform.position + Vector3.up * 500 - Vector3.left * m_Range, Vector3.right);
+            ray = new Ray(transform.position + Vector3.up * 20 - Vector3.left * m_Range, Vector3.right);
             foreach (RaycastHit hit in Physics.RaycastAll(ray, m_Range * 2))
             {
                 if (hit.collider.tag == "Enemy")
@@ -39,7 +50,27 @@ public class BlissCloudShroom : AbstractShroom
 
             m_CooldownTimer = m_AttackCooldown;
         }
-	}
+        CheckDamage();
+    }
+
+    /// <summary>
+    /// Checks if the unit has recieved damage. Plays the hurt sound event if true.
+    /// </summary>
+    void CheckDamage()
+    {
+        var hpc = gameObject.GetComponent<HPComponent>();
+        if (hpc.isHurt && hpc.isAlive)
+        {
+            gameObject.GetComponent<EventPlayer>().PlayEvent();
+            hpc.isHurt = false;
+        }
+    }
+
+    void OnDestroy()
+    {
+        gameObject.GetComponent<EventPlayer>().ChangeParameter("isDead", 1f);
+        gameObject.GetComponent<EventPlayer>().PlayEvent();
+    }
 
     [SerializeField]
     private int m_Range;
