@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{4f5d6fa7-aca3-48a7-bb95-120297580dc9}">
+        <property name="assetPath">
+            <value>Render/Raw Assets/antFix/antRangedAttack.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.6733541666666667</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{78d21234-bdf0-487a-bbc4-002d1730e51c}</destination>
+        </relationship>
+    </object>
+</objects>

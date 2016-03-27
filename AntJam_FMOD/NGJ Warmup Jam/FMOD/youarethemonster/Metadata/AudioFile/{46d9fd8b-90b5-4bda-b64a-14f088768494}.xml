@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{46d9fd8b-90b5-4bda-b64a-14f088768494}">
+        <property name="assetPath">
+            <value>Music/FirstSong_Loop1_Stem02 (Drums).ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>14.769229024943311</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{78d21234-bdf0-487a-bbc4-002d1730e51c}</destination>
+        </relationship>
+    </object>
+</objects>

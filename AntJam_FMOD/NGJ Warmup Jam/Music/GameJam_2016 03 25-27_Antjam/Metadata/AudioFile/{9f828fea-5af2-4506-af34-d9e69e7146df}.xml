@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{9f828fea-5af2-4506-af34-d9e69e7146df}">
+        <property name="assetPath">
+            <value>Music/Menu/Reggae_DrumsTail_01.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>9.2307709750566893</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2567f985-653e-4456-9494-b1d4303adc01}</destination>
+        </relationship>
+    </object>
+</objects>

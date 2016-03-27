@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{037bdf44-c46f-4880-aa7c-fabc3e703a29}">
+        <property name="assetPath">
+            <value>Render/Shrooms/shroomAttack02.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.1941666666666668</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{78d21234-bdf0-487a-bbc4-002d1730e51c}</destination>
+        </relationship>
+    </object>
+</objects>

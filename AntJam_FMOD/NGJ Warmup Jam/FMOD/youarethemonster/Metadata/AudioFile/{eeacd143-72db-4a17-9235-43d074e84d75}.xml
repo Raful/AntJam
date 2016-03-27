@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{eeacd143-72db-4a17-9235-43d074e84d75}">
+        <property name="assetPath">
+            <value>Shrooms/playerSpawn01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.0867499999999999</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{78d21234-bdf0-487a-bbc4-002d1730e51c}</destination>
+        </relationship>
+    </object>
+</objects>
