@@ -47,7 +47,7 @@ public class ShroomBuilder : MonoBehaviour
 					//Still on the same shroom; no button was pressed. Spawn a shroom
 					Debug.Log ("Mouse position: " + mousePosition);
 					GameObject newObject = Instantiate<GameObject> (m_selectedShroomType.shroomPrefab.gameObject);
-					newObject.transform.position = mousePosition;
+					newObject.transform.localPosition = mousePosition;
 				}
 			}
 		}

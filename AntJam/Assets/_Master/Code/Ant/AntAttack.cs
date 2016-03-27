@@ -55,6 +55,8 @@ public class AntAttack : MonoBehaviour
 		Debug.DrawRay (ray.origin, ray.direction * m_range, Color.red);
 		foreach (RaycastHit hit in Physics.RaycastAll(ray, m_range))
 		{
+			string tag = GetComponent<BlissComponent> ().isConverted ? "Enemy" : "Ally";
+
 			if (hit.collider.tag == "Ally") 
 			{
 				HPComponent hpComponent = hit.collider.GetComponent<HPComponent> ();

@@ -11,9 +11,10 @@ GameObject:
   - 65: {fileID: 6562546}
   - 114: {fileID: 11402500}
   - 114: {fileID: 11424564}
+  - 114: {fileID: 11434878}
   m_Layer: 0
   m_Name: ThornShroom
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.94143915, y: -0.47726154, z: 1.5539012}
+  m_LocalPosition: {x: -0.94143915, y: 0.45, z: 1.5539012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436968}
@@ -159,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 10, z: 1}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!114 &11402500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,7 +190,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_hp:
-    m_maxHp: 0
+    m_maxHp: 10
+--- !u!114 &11434878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c2b538b9aa593438ff977cea3f2a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11422926}
   - 114: {fileID: 11406676}
   - 114: {fileID: 11459324}
+  - 114: {fileID: 11443532}
   m_Layer: 0
   m_Name: TankAnt
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c2b538b9aa593438ff977cea3f2a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11443532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d936e83a74c77945a351efdceb5f1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bliss:
+    m_maxBliss: 10
 --- !u!114 &11459324
 MonoBehaviour:
   m_ObjectHideFlags: 1
