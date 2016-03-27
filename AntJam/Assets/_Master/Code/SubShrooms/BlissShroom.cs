@@ -10,21 +10,11 @@ public class BlissShroom : AbstractShroom
 	// Use this for initialization
 	void Start ()
     {
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
-        StartCoroutine(ExecuteAfterTime(4f));
-    }
-
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Debug.Log("Attempting to change sound event.");
-        if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
-            Debug.Log("Could not change sound event.");
-    }
-
-    // Update is called once per frame
-    void Update ()
+	
+	}
+	
+	// Update is called once per frame
+	void Update ()
     {
         Ray ray = new Ray(transform.position, Vector3.right);
         foreach(RaycastHit hit in Physics.RaycastAll(ray, 0.5f)) // What is proper melee range?
@@ -35,5 +25,6 @@ public class BlissShroom : AbstractShroom
                 this.GetComponent<HPComponent>().hp.DealDamage(this.GetComponent<HPComponent>().hp.maxHp);
             }
         }
-    }
+	}
+
 }

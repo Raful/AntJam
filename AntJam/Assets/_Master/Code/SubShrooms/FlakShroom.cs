@@ -11,21 +11,10 @@ public class FlakShroom : AbstractShroom
 	void Start ()
     {
         m_CooldownTimer = 0;
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
-        StartCoroutine(ExecuteAfterTime(4f));
-    }
-
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Debug.Log("Attempting to change sound event.");
-        if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
-            Debug.Log("Could not change sound event.");
-    }
-
-    // Update is called once per frame
-    void Update ()
+	}
+	
+	// Update is called once per frame
+	void Update ()
     {
         m_CooldownTimer -= Time.deltaTime;
 
@@ -38,7 +27,6 @@ public class FlakShroom : AbstractShroom
                 if (hit.collider.tag == "Enemy")
                 {
                     hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
-                    hit.collider.GetComponent<HPComponent>().isHurt = true;
                     m_CooldownTimer = m_AttackCooldown;
                     break;
                 }
@@ -53,13 +41,12 @@ public class FlakShroom : AbstractShroom
                 if (hit.collider.tag == "Enemy")
                 {
                     hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
-                    hit.collider.GetComponent<HPComponent>().isHurt = true;
                     m_CooldownTimer = m_AttackCooldown;
                     break;
                 }
             }
         }
-    }
+	}
 
     [SerializeField]
     private int m_MinRange;

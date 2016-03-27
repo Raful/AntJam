@@ -10,4 +10,7 @@ public abstract class AbstractShroom : MonoBehaviour
     private int m_Cost;
     [SerializeField][Tooltip("Construction cooldown in ms")]
     private int m_BuildCooldown;
+
+	public int cost { get { return m_Cost; } }
+	public int buildCooldown { get { return m_BuildCooldown; } }
 }

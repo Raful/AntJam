@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 446864}
   - 114: {fileID: 11488724}
   - 114: {fileID: 11434386}
-  - 114: {fileID: 11448900}
-  - 114: {fileID: 11470728}
+  - 114: {fileID: 11481136}
+  - 65: {fileID: 6532994}
   m_Layer: 0
   m_Name: GoopShroom
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +74,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 422930}
-  - 65: {fileID: 6556350}
-  - 114: {fileID: 11478264}
   m_Layer: 0
   m_Name: Shroom
   m_TagString: Untagged
@@ -210,18 +208,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177132}
   m_Mesh: {fileID: 4300000, guid: 40cca80a40b61d24299871cc1e0f7fcd, type: 3}
---- !u!65 &6556350
+--- !u!65 &6532994
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152980}
+  m_GameObject: {fileID: 106500}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 10, z: 1}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!65 &6599060
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -260,34 +258,12 @@ MonoBehaviour:
   m_BuildCooldown: 0
   m_range: 5
   m_slow: 50
---- !u!114 &11448900
+--- !u!114 &11481136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717581e2ce06a144eabd2646055d1c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11470728
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92c2b538b9aa593438ff977cea3f2a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11478264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152980}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92c2b538b9aa593438ff977cea3f2a29, type: 3}
@@ -305,8 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_hp:
-    m_maxHp: 0
-  isHurt: 0
+    m_maxHp: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -8,14 +8,13 @@ public class HPComponent : MonoBehaviour
 
     public HP hp { get { return m_hp; } }
     public bool isAlive { get { return m_hp.currentHp > 0; } }
-    public bool isHurt;
+	public bool isHurt { get; set; }
 
     protected virtual void Update()
     {
         if (hp.currentHp <= 0)
         {
             Debug.Log("Dead: " + name);
-            Destroy(gameObject);
             enabled = false;
         }
     }

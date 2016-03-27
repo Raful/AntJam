@@ -15,11 +15,10 @@ GameObject:
   - 65: {fileID: 6548898}
   - 33: {fileID: 3362128}
   - 23: {fileID: 2399646}
-  - 114: {fileID: 11481494}
-  - 114: {fileID: 11497446}
+  - 114: {fileID: 11477218}
   m_Layer: 0
   m_Name: RangedAnt
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +45,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7a59e59f5dc9cea449569984a130f62a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -94,7 +93,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hp:
     m_maxHp: 10
-  isHurt: 0
 --- !u!114 &11412722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 1
   m_graphics: {fileID: 0}
---- !u!114 &11481494
+--- !u!114 &11477218
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,22 +139,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 184124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a2faa2d4c60e444a48c4362fa1d0ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d936e83a74c77945a351efdceb5f1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventName: event:/Enemy/antHurt
-  startOnAwake: 0
---- !u!114 &11497446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717581e2ce06a144eabd2646055d1c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_bliss:
+    m_maxBliss: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

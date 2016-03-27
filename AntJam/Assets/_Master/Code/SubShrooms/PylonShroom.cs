@@ -18,26 +18,20 @@ public class PylonShroom : AbstractShroom
         }
 
         m_PylonList.Add(this);
-    }
-
-    void Start()
-    {
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
-        StartCoroutine(ExecuteAfterTime(4f));
-    }
-
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Debug.Log("Attempting to change sound event.");
-        if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
-            Debug.Log("Could not change sound event.");
-    }
+	}
 
     void OnDisable()
     {
         m_PylonList.Remove(this);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Debug.Log("S was pressed.");
+			this.gameObject.GetComponent<EventPlayer> ().PlayEvent ();
+        }
     }
 
     static public List<PylonShroom> m_PylonList

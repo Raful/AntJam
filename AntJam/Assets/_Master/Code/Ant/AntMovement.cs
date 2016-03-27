@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class AntMovement : MonoBehaviour 
 {
@@ -14,11 +15,17 @@ public class AntMovement : MonoBehaviour
     private Collider m_collider;
     private float m_yVelocityDown = 0;
     private bool m_falling = false;
+	private float m_startX;
 
     void Awake()
     {
         m_collider = GetComponent<Collider>();
     }
+
+	void Start()
+	{
+		m_startX = transform.position.x;
+	}
     
 	// Update is called once per frame
 	protected virtual void FixedUpdate () 
@@ -41,6 +48,9 @@ public class AntMovement : MonoBehaviour
 					m_graphics.transform.rotation = Quaternion.Euler (velocity);
             }
 
+			if (GetComponent<BlissComponent>().isConverted) //Performance waste, too lazy to fix
+				velocity.x = -velocity.x;
+
             transform.Translate(velocity, Space.Self);
         }
 
@@ -53,16 +63,16 @@ public class AntMovement : MonoBehaviour
 
     protected virtual void Update()
     {
-        Vector3 offset = new Vector3(m_collider.bounds.size.x / 2, 1000f);
+		Vector3 offset = new Vector3(m_collider.bounds.size.x / 2, m_collider.bounds.size.y / 2);
         float distanceToGround = PlaceOnGround.GetDistanceFromGround(m_collider);
         //Check if there's an ant below this
         if (distanceToGround > 0.0001f)
         {
-            if (!RaycastAnt(transform.position + offset, Vector3.down, 2000f))
+            if (!RaycastAnt(transform.position + offset, Vector3.down, 2))
             {
                 //Not below the back of the ant, check in front of it
                 offset.x = -m_collider.bounds.size.x / 2;
-                if (!RaycastAnt(transform.position + offset, Vector3.down, 2000f))
+                if (!RaycastAnt(transform.position + offset, Vector3.down, 2))
                 {
                     //No ants below this one
                     m_falling = true;
@@ -79,6 +89,12 @@ public class AntMovement : MonoBehaviour
                 transform.position += Vector3.down * distanceToGround;
             }
         }
+
+		if (transform.position.x > m_startX && GetComponent<BlissComponent>().isConverted) 
+		{
+			Debug.Log ("Game won");
+			enabled = false;
+		}
     }
 
     private bool RaycastAnt(Vector3 origin, Vector3 direction, float rayLength)

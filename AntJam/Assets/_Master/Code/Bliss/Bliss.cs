@@ -1,4 +1,6 @@
-﻿[System.Serializable]
+﻿using UnityEngine;
+
+[System.Serializable]
 public class Bliss
 {
     public int currentBliss { get { return m_currentBliss; } }
@@ -9,6 +11,7 @@ public class Bliss
         m_currentBliss += bliss;
         if (m_currentBliss > m_maxBliss)
             m_currentBliss = m_maxBliss;
+		Debug.Log ("Bliss: " + bliss);
     }
 
     public void RestoreBliss(int restoredBliss)
