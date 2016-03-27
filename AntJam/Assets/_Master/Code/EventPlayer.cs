@@ -91,6 +91,14 @@ using FMODUnity;
 			eventToPlay.getParameter (name, out paramInstance);
 			paramInstance.setValue (value);
 		}
+
+    public float GetParamValue(string name)
+    {
+        eventToPlay.getParameter(name, out paramInstance);
+        float val;
+        paramInstance.getValue(out val);
+        return val;
+    }
 		
 //Denna funktion triggar en Cue/Sustain point i ett event eller snapshot.
 //För att köra funktionen från ett annat script skriv:
