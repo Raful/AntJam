@@ -41,6 +41,15 @@ public class AntAttack : MonoBehaviour
         {
             m_timeSinceLastAttack += Time.deltaTime;
         }
+
+		if (tag == "Enemy" && GetComponent<BlissComponent> ().isConverted) 
+		{
+			tag = "Ally";
+
+			//Update collider with the new tag
+			GetComponent<Collider> ().enabled = false;
+			GetComponent<Collider> ().enabled = true;
+		}
 	}
 
 	/// <summary>
@@ -57,7 +66,7 @@ public class AntAttack : MonoBehaviour
 		{
 			string tag = GetComponent<BlissComponent> ().isConverted ? "Enemy" : "Ally";
 
-			if (hit.collider.tag == "Ally") 
+			if (hit.collider.tag == tag) 
 			{
 				HPComponent hpComponent = hit.collider.GetComponent<HPComponent> ();
 				if (hpComponent.isAlive) 

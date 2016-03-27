@@ -94,6 +94,7 @@ public class AntMovement : MonoBehaviour
 		{
 			Debug.Log ("Game won");
 			this.enabled = false;
+			WinLossText.SetWinState (true);
 			Time.timeScale = 0;
 		}
     }

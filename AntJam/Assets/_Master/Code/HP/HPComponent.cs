@@ -16,6 +16,7 @@ public class HPComponent : MonoBehaviour
         {
             Debug.Log("Dead: " + name);
             enabled = false;
+			gameObject.SetActive (false);
         }
     }
 }
