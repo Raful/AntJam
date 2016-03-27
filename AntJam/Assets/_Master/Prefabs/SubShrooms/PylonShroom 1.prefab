@@ -45,10 +45,9 @@ GameObject:
   - 114: {fileID: 11491448}
   - 114: {fileID: 11439680}
   - 114: {fileID: 11461726}
-  - 114: {fileID: 11426922}
   m_Layer: 0
-  m_Name: PylonShroom 1
-  m_TagString: Ally
+  m_Name: PylonShroom
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,17 +177,6 @@ MonoBehaviour:
   m_Cost: 0
   m_BuildCooldown: 0
   m_Range: 0
---- !u!114 &11426922
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717581e2ce06a144eabd2646055d1c18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11439680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,7 +214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hp:
     m_maxHp: 0
-  isHurt: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

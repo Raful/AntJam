@@ -18,20 +18,12 @@ public class GoopShroom : AbstractShroom
         if (m_slow < 0)
             m_slow = 0;
 	}
-
-    void start()
+	
+	// Update is called once per frame
+	void Update ()
     {
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
-        StartCoroutine(ExecuteAfterTime(4f));
-    }
 
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
-            Debug.Log("Could not change sound event.");
-    }
+	}
 
     [SerializeField]
     private int m_range;

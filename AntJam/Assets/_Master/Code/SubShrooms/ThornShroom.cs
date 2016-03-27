@@ -11,23 +11,12 @@ public class ThornShroom : AbstractShroom
 	void Start ()
     {
         m_CooldownTimer = 0;
-        gameObject.GetComponent<EventPlayer>().PlayEvent();
-        StartCoroutine(ExecuteAfterTime(4f));
-    }
-
-
-    IEnumerator ExecuteAfterTime(float time)
+	}
+	
+	// Update is called once per frame
+	void Update ()
     {
-        yield return new WaitForSeconds(time);
-
-        if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
-            Debug.Log("Could not change sound event.");
-    }
-
-    // Update is called once per frame
-    void Update ()
-    {
-        m_CooldownTimer -= Time.deltaTime * 1000;
+        m_CooldownTimer =- Time.deltaTime * 1000;
 
         if (m_CooldownTimer <= 0)
         {
@@ -37,15 +26,14 @@ public class ThornShroom : AbstractShroom
                 Ray ray = new Ray(transform.position + Vector3.up * height + Vector3.left * m_Range, Vector3.right);
                 foreach (RaycastHit hit in Physics.RaycastAll(ray, m_Range * 2))
                 {
-                    Debug.DrawRay(transform.position + Vector3.up * height + Vector3.left * m_Range, Vector3.right, Color.red);
                     if (hit.collider.tag == "Enemy")
                     {
-                        Debug.Log("Damage dealt.");
                         hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
-                        hit.collider.GetComponent<HPComponent>().isHurt = true;
+                        Debug.Log("Dealt " + m_Damage.ToString() + " damage.");
                     }
                 }
             }
+
             // Reset cooldown
             m_CooldownTimer = m_AttackCooldown;
         }
