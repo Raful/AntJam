@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 11410118}
+  - {fileID: 11495592}
   EditorEvents:
-  - {fileID: 11406666}
-  - {fileID: 11457940}
-  - {fileID: 11406072}
-  - {fileID: 11410302}
-  - {fileID: 11420552}
-  - {fileID: 11402252}
-  - {fileID: 11483286}
-  - {fileID: 11482388}
-  - {fileID: 11481594}
-  MasterBankRef: {fileID: 11410118}
-  stringsBankWriteTime: 635946310800000000
+  - {fileID: 11453320}
+  - {fileID: 11446260}
+  - {fileID: 11427810}
+  - {fileID: 11418478}
+  - {fileID: 11474246}
+  - {fileID: 11460820}
+  - {fileID: 11489518}
+  - {fileID: 11408248}
+  - {fileID: 11442568}
+  MasterBankRef: {fileID: 11495592}
+  stringsBankWriteTime: 635946828583337545
   cacheVersion: 1
 --- !u!114 &11402252
 MonoBehaviour:
@@ -138,6 +138,21 @@ MonoBehaviour:
   - {fileID: 11467582}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11406658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11406666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +216,50 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11407594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Growth
+  guid: 276cc12d77046f4c9a9d9377aec21cad
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11408248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/firstSong
+  guid: e5aaa8b25aa24f4bace1b8427490b7cf
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 11433990}
+  - {fileID: 11443674}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &11408548
@@ -365,6 +424,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11413080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &11415406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +460,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11415666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11416676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +526,27 @@ MonoBehaviour:
   guid: 676bcd1ea8a7ef47996d90c2982f39bb
   Banks:
   - {fileID: 11453198}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11418478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antRangedAttack
+  guid: 676bcd1ea8a7ef47996d90c2982f39bb
+  Banks:
+  - {fileID: 11495592}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -548,6 +658,36 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &11424742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &11424766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11425014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +703,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &11425796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Spawn
+  guid: 74d7815852f9e74a923daf2837e7ffe6
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11406658}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11426380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +755,28 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &11427810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antAttack
+  guid: 542cbb6fec746c4489f1d59a3840976b
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11435290}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11430092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +815,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11431798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/firstSong
+  guid: e5aaa8b25aa24f4bace1b8427490b7cf
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 11458674}
+  - {fileID: 11444762}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11432404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +853,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11433990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: intensity
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &11434754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +892,42 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &11435030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &11435244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antBombs
+  guid: db81e71f2a09b84b8338748166abbe35
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11435290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -760,6 +1018,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11436726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Hurt
+  guid: efeff994247444468666a12ceca8c8e3
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11476358}
+  - {fileID: 11474070}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11436960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +1129,51 @@ MonoBehaviour:
   - {fileID: 11475748}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11440294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Attack
+  guid: 9a30c908d41b834fb8859972493b0450
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11482898}
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11442568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Hurt
+  guid: efeff994247444468666a12ceca8c8e3
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11490686}
+  - {fileID: 11415666}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11442720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,6 +1195,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11443674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: menu
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &11443980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,6 +1225,44 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11444762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: menu
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &11446260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antHurt
+  guid: 2f6d749afa864f489c06f0397728d77a
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11424766}
+  - {fileID: 11413080}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11446498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,6 +1399,27 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &11453320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Growth
+  guid: 276cc12d77046f4c9a9d9377aec21cad
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11456400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,6 +1496,37 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11458674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: intensity
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &11458792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity_Projects\AntJam_FMOD\NGJ Warmup Jam\FMOD\Desktop\Master Bank.bank
+  lastModified: 635946310800000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11459544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,6 +1542,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11460820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Attack
+  guid: 9a30c908d41b834fb8859972493b0450
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11496208}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11461056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1714,27 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &11471788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antRangedAttack
+  guid: 676bcd1ea8a7ef47996d90c2982f39bb
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11472576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,6 +1778,44 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11473902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antHurt
+  guid: 2f6d749afa864f489c06f0397728d77a
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11493678}
+  - {fileID: 11424742}
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11474070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11474128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,6 +1831,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &11474246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Spawn
+  guid: 74d7815852f9e74a923daf2837e7ffe6
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11482422}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11474674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,6 +1883,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11476358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &11476784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,6 +1995,21 @@ MonoBehaviour:
   - {fileID: 11468198}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11482422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11482644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,6 +2025,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &11482898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11483286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +2186,42 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &11489518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antBombs
+  guid: db81e71f2a09b84b8338748166abbe35
+  Banks:
+  - {fileID: 11495592}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &11490178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11490574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +2237,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11490686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isDead
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &11491594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,6 +2363,43 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11493678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &11493950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/antAttack
+  guid: 542cbb6fec746c4489f1d59a3840976b
+  Banks:
+  - {fileID: 11458792}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11490178}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11494136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,6 +2415,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &11495592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity_Projects\AntJam_FMOD\NGJ Warmup Jam\Desktop\Master Bank.bank
+  lastModified: 635946828583322785
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11495922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,6 +2454,21 @@ MonoBehaviour:
   - {fileID: 11463478}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &11496208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: punch
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &11496286
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,9 +13,10 @@ GameObject:
   - 114: {fileID: 11419278}
   - 114: {fileID: 11432988}
   - 114: {fileID: 11407330}
+  - 114: {fileID: 11480784}
   m_Layer: 0
   m_Name: BlissCloudShroom
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,6 +216,19 @@ MonoBehaviour:
   m_Range: 0
   m_BlissInflict: 0
   m_AttackCooldown: 0
+--- !u!114 &11480784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a2faa2d4c60e444a48c4362fa1d0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: event:/Player/Spawn
+  startOnAwake: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

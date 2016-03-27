@@ -18,7 +18,6 @@ public class BlissShroom : AbstractShroom
     {
         yield return new WaitForSeconds(time);
 
-        Debug.Log("Attempting to change sound event.");
         if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
             Debug.Log("Could not change sound event.");
     }

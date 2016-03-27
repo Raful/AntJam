@@ -19,7 +19,6 @@ public class FlakShroom : AbstractShroom
     {
         yield return new WaitForSeconds(time);
 
-        Debug.Log("Attempting to change sound event.");
         if (!gameObject.GetComponent<EventPlayer>().UpdateEventToPlay("event:/Player/Hurt"))
             Debug.Log("Could not change sound event.");
     }
@@ -29,14 +28,16 @@ public class FlakShroom : AbstractShroom
     {
         m_CooldownTimer -= Time.deltaTime;
 
+        Debug.Log(transform.position.ToString());
         // Prioritize enemies closest to home base.
         if (m_CooldownTimer <= 0)
         {
-            Ray ray = new Ray(transform.position + Vector3.up * 8 + Vector3.left * m_MaxRange, Vector3.right);
+            Ray ray = new Ray(transform.position + Vector3.up * 9 + Vector3.left * m_MaxRange, Vector3.right);
             foreach (RaycastHit hit in Physics.RaycastAll(ray, m_MaxRange - m_MinRange))
             {
                 if (hit.collider.tag == "Enemy")
                 {
+                    Debug.Log("Flak hit " + hit.collider.ToString());
                     hit.collider.GetComponent<HPComponent>().hp.DealDamage(m_Damage);
                     hit.collider.GetComponent<HPComponent>().isHurt = true;
                     m_CooldownTimer = m_AttackCooldown;
@@ -47,7 +48,7 @@ public class FlakShroom : AbstractShroom
 
         if (m_CooldownTimer <= 0)
         {
-            Ray ray = new Ray(transform.position + Vector3.up * 500 + Vector3.right * m_MinRange, Vector3.right);
+            Ray ray = new Ray(transform.position + Vector3.up * 9 + Vector3.right * m_MinRange, Vector3.right);
             foreach (RaycastHit hit in Physics.RaycastAll(ray, m_MaxRange - m_MinRange))
             {
                 if (hit.collider.tag == "Enemy")
