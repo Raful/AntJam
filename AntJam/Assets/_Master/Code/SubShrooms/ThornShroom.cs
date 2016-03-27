@@ -37,6 +37,7 @@ public class ThornShroom : AbstractShroom
                 Ray ray = new Ray(transform.position + Vector3.up * height + Vector3.left * m_Range, Vector3.right);
                 foreach (RaycastHit hit in Physics.RaycastAll(ray, m_Range * 2))
                 {
+                    Debug.DrawRay(transform.position + Vector3.up * height + Vector3.left * m_Range, Vector3.right, Color.red);
                     if (hit.collider.tag == "Enemy")
                     {
                         Debug.Log("Damage dealt.");

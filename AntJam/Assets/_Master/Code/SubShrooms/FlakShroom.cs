@@ -48,7 +48,7 @@ public class FlakShroom : AbstractShroom
 
         if (m_CooldownTimer <= 0)
         {
-            Ray ray = new Ray(transform.position + Vector3.up * 2 + Vector3.right * m_MinRange, Vector3.right);
+            Ray ray = new Ray(transform.position + Vector3.up * 8 + Vector3.right * m_MinRange, Vector3.right);
             foreach (RaycastHit hit in Physics.RaycastAll(ray, m_MaxRange - m_MinRange))
             {
                 if (hit.collider.tag == "Enemy")
