@@ -16,5 +16,7 @@ public class CthuluShroomHP : HPComponent
 	private void GameLost()
 	{
 		Debug.Log ("Game lost");
+		WinLossText.SetWinState (false);
+		Time.timeScale = 0;
 	}
 }

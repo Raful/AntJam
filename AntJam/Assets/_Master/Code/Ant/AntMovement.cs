@@ -93,7 +93,9 @@ public class AntMovement : MonoBehaviour
 		if (transform.position.x > m_startX && GetComponent<BlissComponent>().isConverted) 
 		{
 			Debug.Log ("Game won");
-			enabled = false;
+			this.enabled = false;
+			WinLossText.SetWinState (true);
+			Time.timeScale = 0;
 		}
     }
 
